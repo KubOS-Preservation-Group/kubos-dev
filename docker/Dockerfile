@@ -13,18 +13,18 @@ RUN apt-get install -y software-properties-common \
 	ninja-build python-dev pkg-config \
 	git \
 	cmake \
-	sshpass \
-	python3-pip python3-setuptools \
+	sshpass
+RUN apt-get install -y python3-pip python3-setuptools \
 	# Install kernel additions for better USB device recognition
 	linux-image-extra-virtual \
 	sqlite3 libsqlite3-dev \
 	# Documentation tools
-	doxygen graphviz plantuml \
-	texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended latexmk texlive-fonts-extra \
+	doxygen graphviz plantuml 
+RUN apt-get install -y texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended latexmk texlive-fonts-extra 
 	# resolvconf is no longer included by default as of Ubuntu 18.04
-	resolvconf \
+RUN apt-get install -y resolvconf
 	# kubos linux toolchains
-	minicom \
+RUN apt-get install -y minicom \
 	libc6-i386 lib32stdc++6 lib32z1 \
 	#build utilities
 	unzip mtools
