@@ -9,7 +9,7 @@ RUN apt-get update -y && apt-mark hold grub-common grub-pc grub-pc-bin grub2-com
 RUN apt-get install -y software-properties-common \
 	python3.7 ncurses-dev bc \
 	build-essential libssl-dev libffi-dev libhidapi-hidraw0 gdb \
-	build-essential ninja-build python-dev libffi-dev libssl-dev pkg-config \
+	ninja-build python-dev pkg-config \
 	git \
 	cmake \
 	sshpass \
