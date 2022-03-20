@@ -5,7 +5,8 @@ FROM ubuntu:18.04
 
 # These start an interactive prompt - I can't figure out how to fix it yet...
 RUN apt-get update -y && apt-mark hold grub-common grub-pc grub-pc-bin grub2-common
-
+ARG DEBIAN_FRONTEND=noninteractive
+ENV TZ=America/New_York
 RUN apt-get install -y software-properties-common \
 	python3.7 ncurses-dev bc \
 	build-essential libssl-dev libffi-dev libhidapi-hidraw0 gdb \
