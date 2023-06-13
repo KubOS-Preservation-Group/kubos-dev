@@ -7,6 +7,8 @@ It includes:
 - docker images for CI builds (`docker/kubos-build`) that have been relocated from the main repo
 - a docker image that aims to be an equivalent to the vagrant image to promote reuse and space savings by deduplicating many things with the CI build image (`docker/kobos-sdk`) 
 
+docker images may be a work in progress still
+
 
 ------
 
